@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace FishingGame.FishingSpots
 {
-    public class HarpoonFishingSpot : IHarpoonFishingSpot
+    public class HarpoonFishingSpot : FishingSpot, IHarpoonFishingSpot
     {
-        #region Variables
-
-        private IFishSpotTimer _timerForFishingAvail;
-
-        #endregion
-
+     
         #region Constructor
 
         public HarpoonFishingSpot(IFishSpotTimer fishSpotTimer)
@@ -25,14 +20,7 @@ namespace FishingGame.FishingSpots
 
         #endregion
 
-        #region Methods
-
-        public bool IsFishingSpotAvailable()
-        {
-            return _timerForFishingAvail.IsAFishingSpotAvailable();
-        }
-
-        #endregion
+      
 
 
 
