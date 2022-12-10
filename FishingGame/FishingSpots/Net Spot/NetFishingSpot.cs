@@ -2,15 +2,8 @@
 
 namespace FishingGame.FishingSpots
 {
-    public class NetFishingSpot : INetFishingSpot
+    public class NetFishingSpot : FishingSpot, INetFishingSpot
     {
-
-
-        #region Variables
-
-        private IFishSpotTimer _timerForFishingAvail;
-
-        #endregion
 
         #region Constructor
 
@@ -22,21 +15,6 @@ namespace FishingGame.FishingSpots
         }
 
         #endregion
-
-        #region Methods
-
-        public bool IsFishingSpotAvailable()
-        {
-            return _timerForFishingAvail.IsAFishingSpotAvailable();
-        }
-
-        #endregion
-
-
-
-
-
-
 
     }
 }
